@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="detailGroup"
+  >
+    <div>
+      First Name
+    </div>
+    <div>
+      John
+    </div>
+  </div>
+  <hr />
+  <div
+    className="detailGroup"
+  >
+    <div>
+      Last Name
+    </div>
+    <div>
+      Doe
+    </div>
+  </div>
+  <hr />
+  <div
+    className="detailGroup"
+  >
+    <div>
+      Email
+    </div>
+    <div>
+      admin@mail.to
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders subset of fields 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="detailGroup"
+  >
+    <div>
+      Email
+    </div>
+    <div>
+      admin@mail.to
+    </div>
+  </div>
+  <hr />
+  <div
+    className="detailGroup"
+  >
+    <div>
+      Last Name
+    </div>
+    <div>
+      Doe
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,16 @@
+.formGroup {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.errorMessage {
+  width: 100%;
+  color: orangered;
+  text-align: right;
+}
+
+.submitButton {
+  float: right;
+}

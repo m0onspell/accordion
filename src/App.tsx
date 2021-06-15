@@ -1,56 +1,57 @@
 import React from 'react';
 import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import { Settings } from './features/settings';
+import { Profile } from './features/profile';
+import { Activities } from './features/activities';
+import styles from './App.module.css';
+import { Switch, Link, Route } from 'react-router-dom';
+
+import { AccordionMenu, MenuItemProps } from './common/components/AccordionMenu';
+
+const navItems: MenuItemProps[] = [
+  {
+    label: 'Activities',
+    href: '/activities',
+    items: [
+      { label: 'Recreational', href: '/recreational' },
+      {
+        label: 'Cooking',
+        href: '/cooking',
+      },
+    ],
+  },
+  {
+    label: 'Account',
+    href: '/account',
+    items: [
+      { label: 'Profile', href: '/profile' },
+      { label: 'Settings', href: '/settings' },
+    ],
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
+    <div className={styles.appContainer}>
+      <header className={styles.appHeader}>
+        <Link to="/" className={styles.appLink}>
+          <img src={logo} className={styles.appLogo} alt="logo" />
+          <h1>Accordion App</h1>
+        </Link>
       </header>
+
+      <AccordionMenu className={styles.sideBar} items={navItems} />
+
+      <main className={styles.main}>
+        <Switch>
+          <Route path="/account/settings" component={Settings} />
+          <Route path="/account/profile" component={Profile} />
+          <Route path="/activities/:type" component={Activities} />
+          <Route path="/">
+            <h1 className={styles.greetings}>Hello!</h1>
+          </Route>
+        </Switch>
+      </main>
     </div>
   );
 }

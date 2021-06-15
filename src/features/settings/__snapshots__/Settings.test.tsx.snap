@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <h1>
+    Settings
+  </h1>,
+  <form
+    action="#"
+    onReset={[Function]}
+    onSubmit={[Function]}
+  >
+    <div
+      className="formGroup"
+    >
+      <label
+        htmlFor="firstName"
+      >
+        First Name
+      </label>
+      <input
+        id="firstName"
+        name="firstName"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="First Name"
+        value="John"
+      />
+      <div
+        className="errorMessage"
+      />
+    </div>
+    <div
+      className="formGroup"
+    >
+      <label
+        htmlFor="lastName"
+      >
+        Last Name
+      </label>
+      <input
+        id="lastName"
+        name="lastName"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="Last Name"
+        value="Doe"
+      />
+      <div
+        className="errorMessage"
+      />
+    </div>
+    <div
+      className="formGroup"
+    >
+      <label
+        htmlFor="email"
+      >
+        Email
+      </label>
+      <input
+        id="email"
+        name="email"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="Email"
+        value="admin@mail.to"
+      />
+      <div
+        className="errorMessage"
+      />
+    </div>
+    <button
+      className="submitButton"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>,
+]
+`;

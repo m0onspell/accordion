@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="appContainer"
+>
+  <header
+    className="appHeader"
+  >
+    <a
+      className="appLink"
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="logo"
+        className="appLogo"
+        src="logo.svg"
+      />
+      <h1>
+        Accordion App
+      </h1>
+    </a>
+  </header>
+  AccordionMenu
+  <main
+    className="main"
+  >
+    <h1
+      className="greetings"
+    >
+      Hello!
+    </h1>
+  </main>
+</div>
+`;

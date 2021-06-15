@@ -1,0 +1,24 @@
+.item {
+  text-decoration: none;
+  list-style: none;
+}
+
+.menuLink {
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem 0 1rem 2rem;
+  display: block;
+  box-sizing: border-box;
+}
+
+.activeLink {
+  background-color: #3f5d79;
+  color: #fff;
+  transition: 300ms all;
+}
+
+.menuLink:hover {
+  background-color: #3f5d79;
+  color: #fff;
+  transition: 300ms all;
+}

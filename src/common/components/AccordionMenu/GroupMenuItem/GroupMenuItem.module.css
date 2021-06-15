@@ -1,0 +1,46 @@
+.item {
+  border-bottom: 1px solid #324252;
+  background: #3e5165;
+}
+
+.item:hover {
+  background-color: #324252;
+  transition: 300ms all;
+  color: #09fbd2;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.sectionTitle {
+  color: #fff;
+  padding: 1rem 0 1rem 2rem;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.subItems {
+  height: 0;
+  overflow: hidden;
+}
+
+.activeSection > .sectionTitle {
+  color: #46efa4;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.activeSection > .subItems {
+  display: block;
+  background: #23313f;
+  padding-left: 1rem;
+  color: #fff;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 200ms;
+  height: auto;
+}
+
+.icon {
+  vertical-align: middle;
+}

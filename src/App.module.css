@@ -1,0 +1,62 @@
+.appContainer {
+  margin: 0 auto;
+  width: 70vw;
+  display: grid;
+  grid-template-columns: 18rem 1fr 1fr 1fr;
+  grid-template-areas:
+          "header header header header"
+          "sidebar main main main"
+          "footer footer footer footer";
+}
+
+.appLogo {
+  height: 6rem;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .appLogo {
+    animation: app-logo-float infinite 3s ease-in-out;
+  }
+}
+
+.appHeader {
+  grid-area: header;
+}
+
+.appLink {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.appLink h1 {
+  margin: 0;
+}
+
+.sideBar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
+  width: 20vw;
+  margin: 0 auto;
+}
+
+.greetings {
+  text-align: center;
+}
+
+@keyframes app-logo-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
